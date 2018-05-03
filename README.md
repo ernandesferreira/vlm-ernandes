@@ -12,7 +12,7 @@
 `npm install`
 
 **Install and Start Webpack Dev Server**
-`npm install webpack-dev-server -g && webpack-dev-server`
+`npm i --save-dev webpack@1.14.0 webpack-dev-server@1.16.2`
 
 **Access from the browser**
 `http://localhost:3333`
