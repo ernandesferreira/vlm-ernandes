@@ -16,16 +16,16 @@ class RepoContent extends React.Component{
 						100
 					</span>
 				</div>
-                <div class="container-commits">
-                <ul class="commits-list">					
-                    <li class="commits-item">
-                        <span class="resume-commit">
-                                Don't prevent tab events (#197)
-                                Don't prevent tab events (#197)
-                        </span>
-                    </li>
-				</ul>
-            </div>				
+          <div class="container-commits">
+              <ul class="commits-list">					
+                  <li class="commits-item">
+                      <span class="resume-commit">
+                              Don't prevent tab events (#197)
+                              Don't prevent tab events (#197)
+                      </span>
+                  </li>
+              </ul>
+          </div>				
 			</div>
             
 		);
