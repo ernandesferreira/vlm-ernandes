@@ -1,0 +1,62 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif; }
+
+body, h1, h2, h3, h4, h5, ul {
+  margin: 0; }
+
+#root {
+  height: 100%; }
+
+.container {
+  height: 100%;
+  display: flex; }
+
+.container-commit {
+  padding: 1rem 2rem;
+  flex: 3; }
+
+.menu-sidebar {
+  display: none; }
+
+.containerSidebar {
+  background: #0816bb;
+  flex: 1;
+  text-align: center; }
+  .containerSidebar h2 {
+    padding: 2rem;
+    color: #ffffff; }
+
+ul.list-container {
+  list-style: none;
+  padding: 0; }
+
+li.list-item {
+  padding: 1rem;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff; }
+  li.list-item h3 {
+    color: #ffd818;
+    padding-bottom: 0.5rem;
+    font-weight: 100; }
+  li.list-item i {
+    margin-right: 0.3rem; }
+
+.container-commitsTitle h4 {
+  text-transform: uppercase; }
+
+.container-commitsTitle .branchStats {
+  padding: 1rem 0; }
+  .container-commitsTitle .branchStats .stats-itemContent {
+    margin-right: 10px; }
+    .container-commitsTitle .branchStats .stats-itemContent i {
+      margin-right: 5px; }
+
+.container-commitsTitle .container-commits {
+  border: 1px solid;
+  padding: 10px;
+  margin-top: 15px; }
+  .container-commitsTitle .container-commits .commits-list {
+    list-style: none;
+    padding: 0; }
