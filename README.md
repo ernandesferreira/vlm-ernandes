@@ -1,19 +1,22 @@
 # VML Teste Ernandes
 
-## Install instructions
+## Instruções de Instalação da aplicação
 
-**Clone from GitHub**
+**Clone do GitHub**
 `git clone https://github.com/ernandesferreira/vlm-ernandes.git`
 
-**Go to project folder**
+**Entre na pasta do projeto digitando em seu terminal o seguinte comando**
 `cd vml-ernandes`
 
-**Install dependencies**
+**Instale as dependencias digitando o seguinte o comando a seguir no seu terminal**
 `npm install`
 
-**Install and Start Webpack Dev Server**
-`npm i --save-dev webpack@1.14.0 webpack-dev-server@1.16.2`
+**Instalar e iniciar o servidor de desenvolvimento do Webpack**
+`npm i --save-dev webpack@2.7.0 webpack-dev-server@1.16.2`
 
-**Access from the browser**
+**Acesse o Browser e digite**
 `http://localhost:3333`
+
+**Autor**
+`Ernandes José Ferreira Júnior`
 
