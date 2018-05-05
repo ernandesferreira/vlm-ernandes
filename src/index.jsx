@@ -1,8 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Content from './utils/aplicRepos';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './utils/aplicRepos';
+import { Provider } from 'react-redux';
+import store from './store';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 ReactDOM.render(
-  <Content />
+  <Provider store={store}>
+    <Router>
+      <Route path="/" component={App} />
+    </Router>
+  </Provider>
   , document.getElementById("root")
 );

@@ -2,12 +2,13 @@ import React from 'react';
 
 class AplicItem extends React.Component {
 	render() {
+		const {repo, click} = this.props;
 		return (
-			<li class="list-item">
-				<h3 class="list-name">Nome repo</h3>
-				<span class="list-stars">
-					<i class="fa fa-star"></i>
-					300
+			<li className="list-item" onClick={click}> 
+				<h3 className="list-name">{repo.name}</h3>
+				<span className="list-stars">
+					<i className="fa fa-star"></i>
+					{repo.stargazers_count}
 				</span>
 			</li>
 		);

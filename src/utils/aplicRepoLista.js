@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import AplicItem from './aplicRepoItem';
+import { Link } from 'react-router-dom'
+
+
 
 class AplicLista extends React.Component {
 
@@ -9,13 +12,23 @@ class AplicLista extends React.Component {
       super(props);
     }
 
-    
+    componentDidMount() {
+      const { loadRepositories } = this.props;
+      loadRepositories();
+    }
 
     render(){
+      const { repos, loadRepoCommits, setCurrentRepo, disableMenu } = this.props;
+      const isEmpty = repos.length === 0;
+      
+      if ( isEmpty ) {
+        return <div>Loading repositories...</div>;
+      }
+
         return (
-            <ul class="list-container">
-                <AplicItem/>
-            </ul>
+          <Link to={`/${item.name}`}>
+                <AplicItem repo={item} click={loadRepoCommits.bind(this, item, disableMenu)} />
+          </Link>
         );
     }
 }
@@ -30,7 +43,8 @@ const mapDispatchToProps = dispatch => {
       dispatch({
         type: 'SET_CURRENT_REPO',
         payload: item
-		  }),
+      }),
+      console.log({item})
       dispatch({
         type: 'REQUEST_COMMITS',
         payload: axios.get(`https://api.github.com/repos/globocom/${item.name}/commits`, {
@@ -54,4 +68,7 @@ const mapStateToProps = state => {
   }
 }
 
-export default AplicLista
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AplicLista);

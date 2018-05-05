@@ -2,22 +2,36 @@ import React from 'react';
 import MenuSidebar from './menu';
 import AplicLista from './aplicRepoLista';
 import RepoContent from './aplicRepoContent';
+import { Route } from 'react-router-dom'
 
 
-class aplicRepos extends React.Component {
-    render() {       
+class AplicRepos extends React.Component {
+    render() { 
+
+        const { disableMenu } = this.props;
+        const isMobile = window.innerWidth < 1024 ? true : false;
+        const hideMenu = disableMenu && isMobile ? 'hide-menu' : '';
+
         return (
-            <div class="container">
+            <div className="container">
                 <MenuSidebar />
-                <nav class="containerSidebar">
+                <nav className="containerSidebar">
                     <h2>Repositorios Globo</h2>
                     <AplicLista />                  
                 </nav>
-                <main class="container-commit">
-                  <RepoContent />
+                <main className="container-commit">
+                <RepoContent />
                 </main>               
             </div>
         );
     }
 }
-export default aplicRepos
+const mapStateToProps = state => {
+    return {
+      disableMenu: state.disableMenu
+    }
+  }
+  
+  export default connect(
+    mapStateToProps,
+  )(AplicRepos);
